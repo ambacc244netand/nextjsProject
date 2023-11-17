@@ -1,3 +1,3 @@
 export default function Home() {
-	return <>Hello Next.js</>;
+	return <>Next.js를 시작해 봅시다.</>;
 }

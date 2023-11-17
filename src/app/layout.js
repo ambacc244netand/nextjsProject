@@ -1,4 +1,6 @@
 import './globals.css';
+import Link from 'next/link';
+import Script from 'next/script';
 
 export const metadata = {
 	title: 'Create Next App',
@@ -8,11 +10,25 @@ export const metadata = {
 export default function RootLayout({children}) {
 	return (
 		<html lang='en'>
+			<head>
+				<title>{metadata.title}</title>
+			</head>
 			<body>
 				<h1>
-					<a href={'/'}>Title</a>
+					<Link href='/'>Next.js</Link>
 				</h1>
 
+				<ul>
+					<li>
+						<Link href='/translate'>번역기</Link>
+					</li>
+					<li>
+						<Link href='/notion'>노션</Link>
+					</li>
+					<li>
+						<Link href='/map'>지도</Link>
+					</li>
+				</ul>
 				{children}
 			</body>
 		</html>
